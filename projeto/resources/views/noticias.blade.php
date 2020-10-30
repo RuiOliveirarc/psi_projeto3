@@ -1,27 +1,31 @@
 @extends('layout')
+
+<!-- Titulo da pagina -->
 	@section('titulo-pagina')
-			Projecto
+			NOTICIAS
 	@endsection
 
+<!-- Nome da pagina -->
 	@section('header')
-	
+	Notícias
 	@endsection
 
-	@section('conteudo')
 
-	<br>
+<!-- Texto -->
+	@section('Texto')
+        <h3 align="center">
+            Prémio PME Inovação COTEC-BPI
+        </h3>
+<br>
+        Nas ultimas 24 horas,  a nossa empresa <br> foi premiada com o Prémio PME Inovação COTEC-BPI
+<br>
+<br>
+        <i>
+            Agradece-mos a todos os clientes por confiarem nos nossos serviços
+        </i>
+    @endsection
 
-    <div class="container">
-            <div class="row">
-                <div class="col-md-7">
-                    <div class="overlay">
-                        <div style="background-color: black" class="text">Nas ultimas 24 horas A nossa empresa<br> foi premiada com o premio de melhor ideia de portugal</div>
-                    </div>
-                </div>
-                <div class="col-md-5">
-                    <img style="width: 500px" src="img/noticias.jpg">
-                </div>
-            </div>
-    </div>
-
-	@endsection
+<!-- Imagem -->
+    @section('Imagem')
+        <img style="width: 500px" src="img/noticias.jpg">
+    @endsection

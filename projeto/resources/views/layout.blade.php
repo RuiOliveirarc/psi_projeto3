@@ -8,23 +8,66 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-	<h2>@yield('header')</h2>
 	
+<!-- Div do cabeçalho que aparece na parte superior de todas as paginas-->
 	<div style="background-color: gray" class="container">
-            <div class="row">
-                <div class="col-md-2">
-                	<img src="img/logo.jpg">
-				</div>
-				<div style="" class="col-md-10">
-                	<h1>Design Gráfico</h1>
-                	<br>
-                	<h4>Contacto-nos: 919119191</h4>
-				</div>
+        <div class="row">
+
+<!-- Logotipo -->
+            <div class="col-md-2">
+            	<img src="img/logo.jpg">
 			</div>
-	</div>
+
+<!-- Empresa e contacto -->
+			<div style="" class="col-md-6">
+            	<h1>Design Gráfico</h1>
+				<h5>Rui Oliveira 12I-2</h5>
+<br>
+               	<h4>Contacte-nos: 919119191</h4>
+
+			</div>
+
+<!-- Div para aparecer o nome da pagina que estamos -->
+			<div class="col-md-4">
+<br>
 <br>
 
-@yield('conteudo')
+<!-- Nome da pagina atual-->
+				<h1>
+					@yield('header')
+				</h1>
+			</div>
+		</div>
+	</div>
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+<!-- Div para as imagens e o texto de cada pagina -->
+	<div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="overlay">
+                    <div style="background-color: black" class="text">
+                    	@yield('Texto')
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                @yield('Imagem')
+            </div>
+        </div>
+    </div>
+
+
+
+	@yield('conteudo')
+
+<!-- Div do rodapé com os links para cade pagina -->
 	<div id="rodape" class="menu-rodape">
 		<div class="icon-bar">
   			<a class="active" href="/"><i class="fa fa-home"></i></a> <!--HOME-->
@@ -34,6 +77,9 @@
   			<a href="contacto"><i class="fa fa-phone"></i></a> <!--CONTACTO-NOS-->
 		</div>
 	</div>
+
+
+
 
 
 	<script src="{{asset('js/jquery-3.5.1.min.js')}}"></script>

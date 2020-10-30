@@ -1,32 +1,37 @@
 @extends('layout')
+
+<!-- Titulo da pagina -->
 	@section('titulo-pagina')
-			Projecto
+			CONTACTO
 	@endsection
 
+<!-- Nome da pagina -->
 	@section('header')
-
+		Contacte-nos
 	@endsection
 
-	@section('conteudo')
-	<br>
-	<h4>Contacto-nos</h4>
-	<br>
-	<form method="post" action="{{route('processar.form')}}">
+<!-- FORMULARIO -->
+	@section('Texto')
+		<form method="post" action="{{route('processar.form')}}">
 			@csrf
 			<label for="nome">Nome</label>
 			<input type="text" name="nome">
-			<br>
+<br>
 
 			<label for="morada">Morada</label>
 			<input type="text" name="morada">
-			<br>
+<br>
 
 			<label for="automovel">Telemovel</label>
-				<input type="text" name="morada">
+			<input type="text" name="telemovel">
 
-			<br>
+<br>
 			<button type="submit">Enviar</button>
-
 		</form>
 		
+	@endsection
+
+<!-- Imagem -->
+	@section('Imagem')
+		<img width="500px" src="img/tele.jpg">
 	@endsection
